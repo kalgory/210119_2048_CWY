@@ -33,12 +33,15 @@ void search(int count) {
 }
 
 void _get(int y, int x) {
+    // map을 비우고 queue에 넣는 과정
 	if (map[y][x]) {
 		q.push(map[y][x]);
 		map[y][x] = 0;
 	}
 }
+
 void _merge(int y, int x, int dy, int dx) {
+    // queue와 map을 비교하면서 map에 값을 채우는 과정
 	while (!q.empty()) {
 		temp = q.front();
 		q.pop();
